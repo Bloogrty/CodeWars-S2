@@ -28,5 +28,5 @@
 
 // solution 3: sort()
 function findShort(sentence) {
-  return sentence.split(" ").sort((a, b) => a.length - b.length)[0].length;
+  return sentence.split(" ").sort((a, b) => a.length - b.length)[0].length; //for sorting //getting the first array which is the lowest length //output to int, not the string
 }
