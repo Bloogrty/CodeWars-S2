@@ -1,6 +1,6 @@
 // Name:Sum of two lowest positive integers
 // Link:https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/javascript
-// Solution:
+// Solution:https://www.codewars.com/kata/558fc85d8fd1938afb000014/solutions/javascript
 
 function sumTwoSmallestNumbers(numbers) {
   // Code here
