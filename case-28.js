@@ -1,6 +1,6 @@
 // Name:Calculate BMI
 // Link:https://www.codewars.com/kata/57a429e253ba3381850000fb/train/javascript
-// Solution:
+// Solution:https://www.codewars.com/kata/57a429e253ba3381850000fb/solutions/javascript
 
 function bmi(weight, height) {
   const bmi = weight / height ** 2;
@@ -12,7 +12,7 @@ function bmi(weight, height) {
 
   return bmi <= 18.5
     ? "Underweight"
-    : bmi < 25
+    : bmi <= 25
     ? "Normal"
     : bmi <= 30
     ? "Overweight"
