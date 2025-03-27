@@ -15,3 +15,5 @@ const isSquare = (number) => {
   if (number < 0) return false;
   return Number.isInteger(Math.sqrt(number));
 };
+
+module.exports = isSquare;

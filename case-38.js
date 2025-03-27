@@ -11,3 +11,5 @@ function removeSmallest(numbers) {
 
   return numbers.filter((num, i) => i !== index);
 }
+
+module.exports = removeSmallest;
