@@ -17,24 +17,16 @@
 //   return response.join(" + ");
 // }
 
-// people work:
-// const expandedForm = (n) =>
-//   n
-//     .toString()
-//     .split("")
-//     .reverse()
-//     .map((a, i) => a * Math.pow(10, i))
-//     .filter((a) => a > 0)
-//     .reverse()
-//     .join(" + ");
-
+// Abother logic
 const expandedForm = (n) => {
   return n
     .toString()
     .split("")
     .reverse()
     .map((a, i) => a * Math.pow(10, i))
-    .filter((e) => e > 0);
+    .filter((e) => e > 0)
+    .reverse()
+    .join(" + ");
 };
 
 console.log(expandedForm(12));
