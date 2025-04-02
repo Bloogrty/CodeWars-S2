@@ -9,3 +9,5 @@ const squareSum = (number) => {
 
   return result;
 };
+
+console.log(squareSum([2, 3]));
