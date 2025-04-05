@@ -14,7 +14,7 @@ function remove(str, what) {
     }
   }
 
-  return what;
+  return result;
 }
 
 console.log(remove("this is a string", { t: 1, i: 2 }));

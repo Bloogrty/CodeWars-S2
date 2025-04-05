@@ -1,0 +1,57 @@
+🧠 JavaScript Prototype Methods - Quick Notes
+
+--------------------------------------------------
+📌 What is a Prototype Method?
+
+- A way to add new behavior to all instances of a type (e.g. String, Array).
+- Syntax example (for String):
+  
+  Object.defineProperty(String.prototype, 'methodName', {
+    value: function () {
+      // "this" refers to the string
+    }
+  });
+
+--------------------------------------------------
+✅ Why Use It?
+
+- Cleaner syntax: "hello".toJadenCase() vs toJadenCase("hello")
+- Reusable on every instance
+- Feels like built-in behavior (like .toUpperCase())
+
+--------------------------------------------------
+⚠️ When NOT to Use
+
+- When building libraries or shared code (might pollute global objects)
+- When naming conflicts can happen
+- If your team prefers functional utils over prototype extensions
+
+--------------------------------------------------
+🧰 Real Frontend Example - Email Validator
+
+Object.defineProperty(String.prototype, 'isEmail', {
+  value: function () {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this);
+  }
+});
+
+Usage:
+"me@example.com".isEmail(); // true
+"invalid-email".isEmail();  // false
+
+--------------------------------------------------
+💡 Use Case Summary
+
+| Use Case                           | Recommendation              |
+|-----------------------------------|-----------------------------|
+| Want to use like func("str")      | Use regular function        |
+| Want to use like "str".func()     | Use prototype method        |
+| Reusable across all strings       | ✅ Yes with prototype        |
+| Easier to test/debug              | ✅ Yes in small projects     |
+
+--------------------------------------------------
+🎯 Final Tip
+
+- You can use "this" inside the prototype method to refer to the value the method is called on.
+- No need to pass a parameter like `str` when using prototype methods — just use `this`.
+
