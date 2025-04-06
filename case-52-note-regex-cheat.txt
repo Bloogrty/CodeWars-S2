@@ -1,0 +1,77 @@
+
+Regex Cheat Sheet (Beginner-Friendly)
+
+--------------------------------------------------
+Basic Symbols
+--------------------------------------------------
+.        : Any character except newline
+\d       : Any digit (0–9)
+\D       : Any non-digit character
+\w       : Any word character (letters, digits, underscore)
+\W       : Any non-word character
+\s       : Any whitespace character (space, tab, newline)
+\S       : Any non-whitespace character
+
+--------------------------------------------------
+Quantifiers
+--------------------------------------------------
+*        : 0 or more times
++        : 1 or more times
+?        : 0 or 1 time (optional)
+{n}      : Exactly n times
+{n,}     : At least n times
+{n,m}    : Between n and m times
+
+--------------------------------------------------
+Anchors
+--------------------------------------------------
+^        : Start of string
+$        : End of string
+\b       : Word boundary
+\B       : Not a word boundary
+
+--------------------------------------------------
+Character Classes
+--------------------------------------------------
+[abc]    : Matches a, b, or c
+[^abc]   : Matches anything except a, b, or c
+[a-z]    : Matches any lowercase letter
+[A-Z]    : Matches any uppercase letter
+[0-9]    : Matches any digit (same as \d)
+
+--------------------------------------------------
+Groups and Alternation
+--------------------------------------------------
+(x)      : Capture group
+(?:x)    : Non-capturing group
+x|y      : Matches x or y
+
+--------------------------------------------------
+Escaping
+--------------------------------------------------
+\        : Escape character to treat special characters literally (e.g., \., \*, \+)
+
+--------------------------------------------------
+Useful Examples
+--------------------------------------------------
+^\d{4}$              : Exactly 4 digits
+^\d{6}$              : Exactly 6 digits
+^\d{4}|\d{6}$       : 4 or 6 digits (but this one is flawed — use grouping!)
+^(\d{4}|\d{6})$     : Exactly 4 or 6 digits only
+^[a-zA-Z0-9_]{3,16}$  : Username with 3–16 word characters
+^\w+@\w+\.\w+$     : Basic email pattern
+
+--------------------------------------------------
+Flags (used like /pattern/flags)
+--------------------------------------------------
+g  : Global (find all matches)
+i  : Case-insensitive
+m  : Multi-line (^ and $ match each line)
+
+--------------------------------------------------
+Tips
+--------------------------------------------------
+- Always use ^ and $ if you want the full string to match, not just a part of it.
+- Use tools like regex101.com to test your regex live with explanation.
+- Escape special characters when needed: . * + ? ^ $ ( ) [ ] { } | \ /
+
